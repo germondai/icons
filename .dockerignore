@@ -1,0 +1,17 @@
+.dockerignore
+.DS_Store
+.editorconfig
+.env*
+.git
+.github
+.gitignore
+.vscode
+*.log
+*.md
+biome.json
+docker-compose*
+Dockerfile*
+LICENSE
+Makefile
+node_modules
+tests
