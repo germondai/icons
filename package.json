@@ -1,0 +1,43 @@
+{
+  "name": "@germondai/icons",
+  "version": "1.0.0",
+  "description": "Drop-in tech icon strips for GitHub profiles, READMEs and portfolios - styled via URL params",
+  "module": "src/index.ts",
+  "main": "src/index.ts",
+  "type": "module",
+  "author": "germondai <germondai@gmail.com> (https://github.com/germondai)",
+  "license": "MIT",
+  "homepage": "https://icons.germondai.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/germondai/icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/germondai/icons/issues"
+  },
+  "keywords": [
+    "svg",
+    "api",
+    "typescript",
+    "icons",
+    "bun",
+    "elysia"
+  ],
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint",
+    "fmt": "biome format",
+    "fmt:check": "biome format --check ."
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.2",
+    "@resvg/resvg-js": "^2.6.2",
+    "elysia": "^1.4.28"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14"
+  }
+}
