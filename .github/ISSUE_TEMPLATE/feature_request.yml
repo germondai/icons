@@ -1,0 +1,39 @@
+name: ✨ Feature Request
+description: Suggest an idea or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea? Great — describe it below!
+        For larger changes, opening an issue first helps align on the approach before writing any code.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 💡 Problem / motivation
+      description: What problem does this solve, or what use-case does it enable?
+      placeholder: "I often need to... but currently there's no way to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 🛠️ Proposed solution
+      description: Describe what you'd like to happen. A URL example is very helpful if it's an API change.
+      placeholder: "Add a `?border=1` param that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives considered
+      description: Any workarounds or other approaches you've thought about?
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📎 Additional context
+      description: Screenshots, links, prior art, or anything else useful.

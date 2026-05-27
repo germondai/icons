@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live API
+    url: https://icons.germondai.com
+    about: Try the API directly
