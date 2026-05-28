@@ -19,7 +19,11 @@ export interface AssetEntry {
 const store = new Map<string, Map<VariantName, AssetEntry>>()
 let slugList: string[] = []
 
-const parseSvg = (raw: string, variant: VariantName): { viewBox: string; content: string; fullBleed: boolean } => {
+const parseSvg = (
+  raw: string,
+  variant: VariantName,
+  slug: string,
+): { viewBox: string; content: string; fullBleed: boolean } => {
   const viewBox = raw.match(/viewBox="([^"]+)"/)?.[1] ?? "0 0 24 24"
 
   // Capture fill from root <svg> before stripping it (gen-originals.ts injects fill there)
@@ -35,6 +39,17 @@ const parseSvg = (raw: string, variant: VariantName): { viewBox: string; content
     .replace(/xlink:href/g, "href")
     .replace(/\s*xmlns(?::[a-z]+)?="[^"]*"/g, "")
     .trim()
+
+  // Namespace IDs to prevent conflicts when multiple icons are combined in one SVG document.
+  // SVGO minifies IDs to short names (a, b, c…) — without prefixing, two icons sharing id="a" would collide.
+  const hasIds = /\bid="/.test(content)
+  if (hasIds) {
+    const pfx = slug.replace(/[^a-z0-9]/gi, "")
+    content = content
+      .replace(/\bid="([^"]+)"/g, `id="${pfx}-$1"`)
+      .replace(/\burl\(#([^)]+)\)/g, `url(#${pfx}-$1)`)
+      .replace(/\bhref="#([^"]+)"/g, `href="#${pfx}-$1"`)
+  }
 
   // Propagate the root fill onto shape elements that have no explicit fill
   if (rootFill && variant !== "mono") {
@@ -97,7 +112,7 @@ export const loadAssets = async (): Promise<void> => {
           const filename = `${variant}.svg`
           if (!files.includes(filename)) return
           const raw = await Bun.file(join(dir, filename)).text()
-          const { viewBox, content, fullBleed } = parseSvg(raw, variant)
+          const { viewBox, content, fullBleed } = parseSvg(raw, variant, slug)
           variantMap.set(variant, { slug, variant, viewBox, content, fullBleed })
         }),
       )
