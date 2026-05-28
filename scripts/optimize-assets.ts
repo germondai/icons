@@ -19,7 +19,7 @@ const SVGO_CONFIG = {
       name: "preset-default",
       params: {
         overrides: {
-          cleanupIds: false, // keep IDs stable — icons share a document when embedded
+          mergePaths: false,
           inlineStyles: {
             onlyMatchedOnce: false,
             removeMatchedSelectors: true,
@@ -27,7 +27,10 @@ const SVGO_CONFIG = {
         },
       },
     },
-    "convertStyleToAttrs", // style="fill:red" → fill="red"
+    "convertStyleToAttrs",
+    "removeTitle",
+    "removeDesc",
+    { name: "removeAttrs", params: { attrs: ["data-.*", "aria-.*", "role"] } },
   ],
 } as const
 
@@ -67,7 +70,8 @@ async function run() {
         totalBefore += before
         totalAfter += after
 
-        if (after < before) {
+        const changed = result.data !== raw
+        if (changed) {
           if (!dryRun) await Bun.write(path, result.data)
           optimized++
         } else {
