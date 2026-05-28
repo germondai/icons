@@ -4,6 +4,7 @@ import { env } from "~/config/env"
 import { loadAssets } from "~/lib/assets"
 import { iconsRoute } from "~/routes/icons"
 import { metaRoute } from "~/routes/meta"
+import { reviewRoute } from "~/routes/review"
 import pkg from "../package.json"
 
 await loadAssets()
@@ -12,6 +13,7 @@ const app = new Elysia()
   .use(cors())
   .use(iconsRoute)
   .use(metaRoute)
+  .use(env.NODE_ENV === "development" ? reviewRoute : new Elysia())
   .get("/", () => ({
     name: pkg.name,
     version: pkg.version,
