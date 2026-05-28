@@ -21,15 +21,28 @@ let slugList: string[] = []
 
 const parseSvg = (raw: string, variant: VariantName): { viewBox: string; content: string; fullBleed: boolean } => {
   const viewBox = raw.match(/viewBox="([^"]+)"/)?.[1] ?? "0 0 24 24"
+
+  // Capture fill from root <svg> before stripping it (gen-originals.ts injects fill there)
+  const rootFill = raw.match(/<svg\b[^>]*\sfill="((?!none)[^"]+)"/i)?.[1]
+
   let content = raw
     .replace(/<\?xml[^>]*\?>\s*/g, "")
     .replace(/<!DOCTYPE[^>]*>\s*/g, "")
     .replace(/<svg[^>]*>\s*/, "")
     .replace(/\s*<\/svg>\s*$/, "")
     .replace(/<title>[^<]*<\/title>\s*/g, "")
+    .replace(/<style[^>]*>[\s\S]*?<\/style>\s*/gi, "")
     .replace(/xlink:href/g, "href")
     .replace(/\s*xmlns(?::[a-z]+)?="[^"]*"/g, "")
     .trim()
+
+  // Propagate the root fill onto shape elements that have no explicit fill
+  if (rootFill && variant !== "mono") {
+    content = content.replace(
+      /<(path|circle|rect|ellipse|polygon|polyline)\b(?![^>]*\bfill\s*=)/gi,
+      `<$1 fill="${rootFill}"`,
+    )
+  }
 
   if (variant === "mono") {
     content = content
@@ -81,7 +94,7 @@ export const loadAssets = async (): Promise<void> => {
       const variantMap = new Map<VariantName, AssetEntry>()
       await Promise.all(
         ALL_VARIANTS.map(async (variant) => {
-          const filename = `${slug}-${variant}.svg`
+          const filename = `${variant}.svg`
           if (!files.includes(filename)) return
           const raw = await Bun.file(join(dir, filename)).text()
           const { viewBox, content, fullBleed } = parseSvg(raw, variant)
