@@ -67,13 +67,16 @@ export const generateSVG = (opts: GenerateOptions): GenerateResult => {
     let fillAttr = ""
     let content = entry.content
     if (req.color) {
-      fillAttr = ` fill="#${req.color}"`
-      if (entry.variant !== "mono") {
-        // strip hardcoded fills so the parent svg fill attr takes over (same trick as mono)
+      if (entry.variant === "mono") {
+        // mono uses fill="currentColor" internally — drive it via the CSS color property
+        fillAttr = ` color="#${req.color}"`
+      } else {
+        fillAttr = ` fill="#${req.color}"`
+        // strip hardcoded fills so the parent svg fill attr takes over
         content = content.replace(/\s+fill="(?!none)[^"]*"/gi, "").replace(/\bfill:\s*(?!none)[^;}"]*;?/gi, "")
       }
     } else if (entry.variant === "mono") {
-      fillAttr = ` fill="#${color ?? iconColor(cellBg ?? "1e2030")}"`
+      fillAttr = ` color="#${color ?? iconColor(cellBg ?? "1e2030")}"`
     }
 
     cells.push(
