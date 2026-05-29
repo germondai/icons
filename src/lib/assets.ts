@@ -60,9 +60,17 @@ const parseSvg = (
   }
 
   if (variant === "mono") {
-    content = content
+    // Replace fills only in visible content — skip <defs> (and the <mask> inside it)
+    // so that mask fill="white"/"black" markers are not corrupted to fill="currentColor".
+    const defsParts: string[] = []
+    const body = content.replace(/<defs[\s\S]*?<\/defs>/gi, (m) => {
+      defsParts.push(m)
+      return `\x00DEFS${defsParts.length - 1}\x00`
+    })
+    const replaced = body
       .replace(/\s+fill="(?!none)[^"]*"/gi, ' fill="currentColor"')
       .replace(/fill:\s*(?!none)[^;}"]+/gi, "fill:currentColor")
+    content = replaced.replace(/\x00DEFS(\d+)\x00/g, (_, i) => defsParts[Number(i)] ?? "")
   }
 
   let fullBleed = false
