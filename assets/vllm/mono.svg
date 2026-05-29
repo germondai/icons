@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23.6 0-8.721 4.59L9.829 24h7.41zM9.83 24V5.142H.4z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <mask id="ko">
+      <rect width="24" height="24" fill="white"/>
+      <path fill="black" d="M13.986 4.351 22.378 0l-6.216 23H9.324z"/>
+    </mask>
+  </defs>
+  <g>
+    <path fill="currentColor" mask="url(#ko)" d="M0 4.973h9.324V23z"/>
+  </g>
+</svg>

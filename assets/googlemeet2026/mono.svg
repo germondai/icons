@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 192 192">
+  <defs>
+    <mask id="ko">
+      <rect width="192" height="192" fill="white"/>
+      <path fill="black" d="M110.015 108.88c-6.829-4.718-6.921-14.778-.179-19.62L165 49.643c7.94-5.701 19-.038 19 9.737v77.755c0 9.675-10.861 15.359-18.821 9.859z"/>
+      <path fill="black" d="M8 71c0-24.3 19.7-44 44-44h64c11.046 0 20 8.954 20 20v98c0 11.046-8.954 20-20 20H28c-11.046 0-20-8.954-20-20z"/>
+      <path fill="black" d="m73.906 99.198 110-63.198v124z"/>
+      <circle fill="black" cx="38" cy="135" r="14"/>
+    </mask>
+  </defs>
+  <g>
+    <path fill="currentColor" mask="url(#ko)" d="M8 71c0-24.3 19.7-44 44-44h64c11.046 0 20 8.954 20 20v98c0 11.046-8.954 20-20 20H28c-11.046 0-20-8.954-20-20z"/>
+  </g>
+</svg>

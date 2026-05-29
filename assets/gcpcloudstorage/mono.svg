@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+  <defs>
+    <mask id="ko">
+      <rect width="24" height="24" fill="white"/>
+      <path fill="black" d="M20 4h2v7h-2z"/>
+      <path fill="black" d="M22 4h-2v7z"/>
+      <path fill="black" d="M2 4h2v7H2z"/>
+      <path fill="black" d="M6 7h6v1H6z"/>
+      <path fill="black" d="M2 13h20v7H2z"/>
+      <path fill="black" d="M20 13h2v7h-2z"/>
+      <path fill="black" d="M22 13h-2v7z"/>
+      <path fill="black" d="M2 13h2v7H2z"/>
+      <path fill="black" d="M6 16h6v1H6z"/>
+      <rect fill="black" x="15" y="6" width="3" height="3"/>
+      <rect fill="black" x="15" y="15" width="3" height="3"/>
+    </mask>
+  </defs>
+  <g>
+    <path fill="currentColor" mask="url(#ko)" d="M2 4h20v7H2z"/>
+  </g>
+</svg>

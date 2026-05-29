@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
+  <defs>
+    <clipPath id="a"><rect width="26" height="26" rx="8"/></clipPath>
+    <clipPath id="b"><path d="M0 0h26v26H0z"/></clipPath>
+    <mask id="ko">
+      <rect width="26" height="26" fill="white"/>
+      <path fill="black" d="M0 0h26v26H0z"/>
+      <path fill="black" d="M0 0h26v26H0z"/>
+      <path fill="black" d="M0 0h26v26H0z"/>
+      <path fill="black" d="M0 0h26v26H0z"/>
+      <path fill="black" d="M0 0h26v26H0z"/>
+      <path fill="black" d="M11.5 18.5v-3h-6v3a3 3 0 1 0 6 0m-5-2h4v2l-.005.15A2 2 0 0 1 8.5 20.5l-.15-.006A2 2 0 0 1 6.5 18.5z"/>
+      <path fill="black" d="M5.5 8.5v3h6v-3a3 3 0 1 0-6 0m5 2h-4v-2l.005-.15A2 2 0 0 1 8.5 6.5l.15.005A2 2 0 0 1 10.5 8.5z"/>
+      <path fill="black" d="M11.5 16.5v-6h-6v6zm-5-5h4v4h-4z"/>
+      <path fill="black" d="M18.5 5.5h-3v6h3a3 3 0 1 0 0-6m-1.999 5v-4H18.5l.15.005A2 2 0 0 1 20.5 8.5l-.006.15A2 2 0 0 1 18.5 10.5z"/>
+      <path fill="black" d="M10.5 8.5v3h6v-6h-3a3 3 0 0 0-3 3m3-2h2v4h-4v-2l.005-.15A2 2 0 0 1 13.5 6.5"/>
+      <rect fill="black" x="0" y="0" width="26" height="26"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#a)">
+    <path fill="currentColor" mask="url(#ko)" d="M0 0h26v26H0z"/>
+  </g>
+</svg>

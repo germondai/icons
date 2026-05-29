@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath>
+    <mask id="wko">
+      <rect width="16" height="16" fill="white"/>
+      <path fill="black" d="M4 13V3h3.134v4.714L9.366 3h3.563l-2.605 4.957L13 13H9.351L7.134 8.2V13z"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#wko)">
+    <rect width="16" height="16" fill="currentColor" rx="2"/>
+  </g>
+</svg>

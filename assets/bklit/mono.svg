@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 256 256">
+  <defs>
+    <clipPath id="c"><path d="M0 0h256v256H0z"/></clipPath>
+    <mask id="wko">
+      <rect width="256" height="256" fill="white"/>
+      <rect width="256" height="256" fill="black" rx="20"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#wko)">
+    <rect width="256" height="257" fill="currentColor" rx="64"/>
+  </g>
+  <path fill="currentColor" d="M76.023 132.081s13.407-22.163 44.325-22.163c28.825 0 44.325 22.163 44.325 22.163s-13.552 22.163-44.325 22.162c-28.645 0-44.325-22.162-44.325-22.162"/>
+  <path fill="currentColor" d="M175.754 165.325c0 26.776-20.771 55.406-55.406 55.406v-66.487s27.811 1.377 44.325-22.163c8.421 11.265 11.081 23.025 11.081 33.244"/>
+  <path fill="currentColor" d="M64.941 165.325c0 26.776 20.771 55.406 55.407 55.406v-66.487s-25.934 1.45-44.325-22.163C67.6 143.346 64.94 155.106 64.94 165.325"/>
+  <path fill="currentColor" d="M64.941 98.837c0-26.776 20.771-55.406 55.407-55.406v66.488s-27.812-1.378-44.325 22.162C67.6 120.816 64.94 109.056 64.94 98.837"/>
+  <path fill="currentColor" d="M175.754 98.837c0-26.776-20.771-55.406-55.406-55.406v66.488s26.157-1.352 44.325 22.162c8.421-11.265 11.081-23.025 11.081-33.244"/>
+</svg>

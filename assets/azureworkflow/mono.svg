@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <mask id="wko">
+      <rect width="18" height="18" fill="white"/>
+      <rect width="3.622" height="3.622" x="7.158" y="1.13" fill="black" rx=".328"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#wko)">
+    <path fill="currentColor" d="M15.509 7.868h-5.457a.293.293 0 0 1-.293-.293V5.491H8.293v2.084A.294.294 0 0 1 8 7.868H2.479a.587.587 0 0 0-.587.587v2.7h1.466v-1.5a.294.294 0 0 1 .294-.293h4.641v3.918h1.466V9.368h4.577a.293.293 0 0 1 .293.293v1.53H16.1V8.455a.587.587 0 0 0-.591-.587"/>
+    <rect width="5.881" height="5.881" x="6.029" fill="currentColor" rx=".532"/>
+  </g>
+  <rect width="4.802" height="4.802" x=".223" y="11.167" fill="currentColor" rx=".435"/>
+  <rect width="4.802" height="4.802" x="6.624" y="13.198" fill="currentColor" rx=".435"/>
+  <rect width="4.802" height="4.802" x="12.975" y="11.199" fill="currentColor" rx=".435"/>
+</svg>

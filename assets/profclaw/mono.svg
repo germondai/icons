@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><ellipse cx="12" cy="12.96" rx="5.76" ry="5.28"/><rect width="1.92" height="2.4" x="9.36" y="17.52" rx=".96"/><rect width="1.92" height="2.4" x="12.72" y="17.52" rx=".96"/><ellipse cx="4.8" cy="12.96" rx="1.92" ry="1.44"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-width=".36" d="m3.6 11.76 1.2 1.2 1.2-1.2"/><ellipse cx="19.2" cy="12.96" rx="1.92" ry="1.44"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-width=".36" d="m18 11.76 1.2 1.2 1.2-1.2"/><path stroke="currentColor" stroke-linecap="round" stroke-width=".53" d="M9.36 8.16 7.44 4.8"/><circle cx="7.2" cy="4.32" r=".84"/><path stroke="currentColor" stroke-linecap="round" stroke-width=".53" d="m14.64 8.16 1.92-3.36"/><circle cx="16.8" cy="4.32" r=".84"/><circle cx="10.32" cy="12.24" r="1.44" fill="#fff"/><circle cx="13.68" cy="12.24" r="1.44" fill="#fff"/></svg>
+<svg fill="#f43f5e" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="wko">
+      <rect width="24" height="24" fill="white"/>
+      <circle cx="7.2" cy="4.32" fill="black" opacity=".35" r=".31"/>
+      <circle cx="16.8" cy="4.32" fill="black" opacity=".35" r=".31"/>
+      <circle cx="10.32" cy="12.24" fill="black" r="1.56"/>
+      <circle cx="13.68" cy="12.24" fill="black" r="1.56"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#wko)">
+    <ellipse cx="11.52" cy="11.76" fill="currentColor" opacity=".15" rx="3.12" ry="2.16"/>
+    <ellipse cx="19.2" cy="12.96" fill="currentColor" rx="1.92" ry="1.44"/>
+    <circle cx="7.2" cy="4.32" fill="currentColor" r=".84"/>
+    <circle cx="16.8" cy="4.32" fill="currentColor" r=".84"/>
+  </g>
+  <circle cx="10.68" cy="12" fill="currentColor" r=".84"/>
+  <circle cx="14.04" cy="12" fill="currentColor" r=".84"/>
+</svg>

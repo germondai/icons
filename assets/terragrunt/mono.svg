@@ -1,0 +1,16 @@
+<svg fill="none" height="129" viewBox="0 0 128 129" width="128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="wko">
+      <rect width="128" height="129" fill="white"/>
+      <path clip-rule="evenodd" d="m64.217 121.97v-57.091l-24.79-14.273-24.79-14.273v57.091z" fill="black" fill-rule="evenodd"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#wko)">
+    <path clip-rule="evenodd" d="m64.217.878 55.58 32v64l-55.58 32-55.58-32v-64zm49.58 35.455-49.58-28.546-49.58 28.546v57.09l49.58 28.546 49.58-28.545z" fill="currentColor" fill-rule="evenodd"/>
+  </g>
+  <path d="m89.007 107.697 24.79-14.273-24.79-14.273-24.79 14.273v28.546z" fill="currentColor"/>
+  <path d="m64.217 64.879v28.545l24.79-14.273z" fill="currentColor"/>
+  <path d="m89.007 50.606-24.79 14.273 24.79 14.272 24.79-14.272z" fill="currentColor"/>
+  <path d="m89.007 22.06-24.79-14.272-24.79 14.272-24.79 14.273 24.79 14.273 24.79-14.273 24.79 14.273 24.79-14.273z" fill="currentColor"/>
+  <path d="m64.217 64.879 24.79-14.273-24.79-14.273-24.79 14.273z" fill="currentColor"/>
+</svg>

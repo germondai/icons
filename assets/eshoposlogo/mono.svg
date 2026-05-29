@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" fill="none" viewBox="0 0 512 512">
+  <defs>
+    <mask id="wko">
+      <rect width="512" height="512" fill="white"/>
+      <rect width="240" height="240" x="136" y="100" fill="black" rx="48"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#wko)">
+    <rect width="512" height="512" fill="currentColor" stroke="#333" stroke-width="2" rx="128"/>
+    <rect width="240" height="240" x="136" y="240" fill="currentColor" rx="48"/>
+  </g>
+  <rect width="240" height="240" x="136" y="100" fill="currentColor" rx="48"/>
+</svg>

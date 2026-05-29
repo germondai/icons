@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1674.45" height="414.354" viewBox="0 0 1255.838 310.766">
+  <defs>
+    <mask id="wko">
+      <rect width="1255.838" height="310.766" fill="white"/>
+      <path fill="black" d="M200.474 81.768v93.763h18.793v26.312h-73.923v-26.312h18.586V81.768h-18.586V55.664h73.923v26.104z"/>
+    </mask>
+  </defs>
+  <g fill="currentColor" mask="url(#wko)">
+    <path fill="currentColor" d="m54.52 2.904.08-.136 256.52 56.684h26.648v251.312H47.952a18.2 18.2 0 0 1-18.2-18.2V267.94z"/>
+    <path fill="currentColor" d="M312.916 254.76H54.52V2.908l.08-.152h240.112a18.2 18.2 0 0 1 18.2 18.2z"/>
+    <path fill="currentColor" d="M0 35.652v252.012l54.6-32.9V2.752Z"/>
+  </g>
+</svg>
