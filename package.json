@@ -30,6 +30,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome lint",
     "fmt": "biome format --write .",
+    "icon:gen-mono": "bun scripts/gen-mono.ts",
     "icon:optimize": "bun scripts/optimize-assets.ts"
   },
   "dependencies": {
