@@ -393,11 +393,19 @@ function simpleMono(svg: string): string {
   const vb = parseViewBox(svg)
   if (vb) svg = removeFullBleed(svg, vb.vw, vb.vh)
 
-  // Strip white-fill elements (eraser layers that would fill transparent holes with currentColor)
-  const wfParts: string[] = []
-  svg = svg.replace(/<defs[\s\S]*?<\/defs>/gi, m => { wfParts.push(m); return `\x00WF${wfParts.length - 1}\x00` })
-  svg = svg.replace(/<(?:path|rect|circle|ellipse|polygon|polyline)([^>]*)\/>/gi, (m, a) => isWhite(getFill(a)) ? "" : m)
-  svg = svg.replace(/\x00WF(\d+)\x00/g, (_, i) => wfParts[Number(i)] ?? "")
+  // Strip white-fill elements only when colored shapes are also present (eraser-layer pattern).
+  // If every visible shape is white/none, the whites ARE the design (white-on-dark icon) and
+  // should be converted to currentColor rather than stripped into an empty SVG.
+  const bodyForWhiteCheck = svg.replace(/<defs[\s\S]*?<\/defs>/gi, "")
+  const hasColoredFills = [...bodyForWhiteCheck.matchAll(/<(?:path|rect|circle|ellipse|polygon|polyline)([^>]*)\/>/gi)]
+    .some(([, a]) => { const f = getFill(a); return f !== "" && !isNone(f) && !isWhite(f) })
+
+  if (hasColoredFills) {
+    const wfParts: string[] = []
+    svg = svg.replace(/<defs[\s\S]*?<\/defs>/gi, m => { wfParts.push(m); return `\x00WF${wfParts.length - 1}\x00` })
+    svg = svg.replace(/<(?:path|rect|circle|ellipse|polygon|polyline)([^>]*)\/>/gi, (m, a) => isWhite(getFill(a)) ? "" : m)
+    svg = svg.replace(/\x00WF(\d+)\x00/g, (_, i) => wfParts[Number(i)] ?? "")
+  }
 
   // Add fill="currentColor" to visible shape elements that have no explicit fill
   // (SVG default is black — those shapes must become currentColor too).
