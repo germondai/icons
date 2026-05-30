@@ -65,7 +65,7 @@ const parseSvg = (
     const defsParts: string[] = []
     const body = content.replace(/<defs[\s\S]*?<\/defs>/gi, (m) => {
       defsParts.push(m)
-      return `\x00DEFS${defsParts.length - 1}\x00`
+      return `￾DEFS${defsParts.length - 1}￾`
     })
     let replaced = body
       .replace(/\s+fill="(?!none)[^"]*"/gi, ' fill="currentColor"')
@@ -84,7 +84,7 @@ const parseSvg = (
       )
     }
 
-    content = replaced.replace(/\x00DEFS(\d+)\x00/g, (_, i) => defsParts[Number(i)] ?? "")
+    content = replaced.replace(/￾DEFS(\d+)￾/g, (_, i) => defsParts[Number(i)] ?? "")
   }
 
   let fullBleed = false
