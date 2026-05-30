@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-  <defs>
-    <mask id="ko">
-      <rect width="24" height="24" fill="white"/>
-      <path fill="black" d="M12 9.5H4.74A2.53 2.53 0 0 0 2 12a2.5 2.5 0 0 0 2.74 2.5H12z"/>
-      <path fill="black" d="M19.5 2.83h-7.26a2.54 2.54 0 0 0-2.74 2.5 2.5 2.5 0 0 0 2.74 2.5h7.26z"/>
-      <circle fill="black" cx="19.5" cy="18.67" r="2.5"/>
-      <circle fill="black" cx="12" cy="12" r="2.5"/>
-      <circle fill="black" cx="19.5" cy="5.33" r="2.5"/>
-    </mask>
-  </defs>
-  <g>
-    <path fill="currentColor" mask="url(#ko)" d="M19.5 16.17h-7.26a2.53 2.53 0 0 0-2.74 2.5 2.5 2.5 0 0 0 2.74 2.5h7.26z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><mask id="a"><path fill="#fff" d="M0 0h24v24H0z"/><path d="M12 9.5H4.74A2.53 2.53 0 0 0 2 12a2.5 2.5 0 0 0 2.74 2.5H12z"/><path d="M19.5 2.83h-7.26a2.54 2.54 0 0 0-2.74 2.5 2.5 2.5 0 0 0 2.74 2.5h7.26z"/><circle cx="19.5" cy="18.67" r="2.5"/><circle cx="12" cy="12" r="2.5"/><circle cx="19.5" cy="5.33" r="2.5"/></mask></defs><path fill="currentColor" d="M19.5 16.17h-7.26a2.53 2.53 0 0 0-2.74 2.5 2.5 2.5 0 0 0 2.74 2.5h7.26z" mask="url(#a)"/></svg>

@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-  <defs>
-    <mask id="ko">
-      <rect width="18" height="18" fill="white"/>
-      <path fill="black" d="M.5 5.788h17v9.478a.57.57 0 0 1-.568.568H1.068a.57.57 0 0 1-.568-.568z"/>
-      <rect fill="black" x="2.328" y="7.049" width="6.281" height="3.408"/>
-      <rect fill="black" x="9.336" y="7.049" width="6.281" height="3.408"/>
-      <rect fill="black" x="2.296" y="11.128" width="6.281" height="3.408"/>
-      <rect fill="black" x="9.304" y="11.128" width="6.281" height="3.408"/>
-    </mask>
-  </defs>
-  <g>
-    <path fill="currentColor" mask="url(#ko)" d="M1.071 2.166h15.858a.57.57 0 0 1 .568.568v3.054H.5V2.734a.57.57 0 0 1 .571-.568"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><defs><mask id="a"><path fill="#fff" d="M0 0h18v18H0z"/><path d="M.5 5.788h17v9.478a.57.57 0 0 1-.568.568H1.068a.57.57 0 0 1-.568-.568z"/><path d="M2.328 7.049h6.281v3.408H2.328z"/><path d="M9.336 7.049h6.281v3.408H9.336z"/><path d="M2.296 11.128h6.281v3.408H2.296z"/><path d="M9.304 11.128h6.281v3.408H9.304z"/></mask></defs><path fill="currentColor" d="M1.071 2.166h15.858a.57.57 0 0 1 .568.568v3.054H.5V2.734a.57.57 0 0 1 .571-.568" mask="url(#a)"/></svg>

@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="408" height="104" viewBox="0 0 408 104">
-  <defs>
-    <clipPath id="a"><path d="M4 4h400v96H4z"/></clipPath>
-    <mask id="wko">
-      <rect width="408" height="104" fill="white"/>
-      <path fill="black" d="M-1.113 82.424h430.518v4.291H-1.113z"/>
-    </mask>
-  </defs>
-  <g fill="currentColor" mask="url(#wko)">
-    <path fill="currentColor" d="M-3.115-9.004h430.518V100H-3.115z"/>
-  </g>
-  <path fill="currentColor" d="M-3.115 86.715h430.518v50.596H-3.115z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="104" viewBox="0 0 408 104"><defs><mask id="a"><path fill="#fff" d="M0 0h408v104H0z"/><path d="M-1.113 82.424h430.518v4.291H-1.113z"/></mask></defs><g fill="currentColor" mask="url(#a)"><path d="M-3.115-9.004h430.518V100H-3.115z"/></g><path fill="currentColor" d="M-3.115 86.715h430.518v50.596H-3.115z"/></svg>

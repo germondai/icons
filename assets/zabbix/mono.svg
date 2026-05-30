@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-  <defs>
-    <mask id="ko">
-      <rect width="64" height="64" fill="white"/>
-      <path fill="black" d="M18.8 15.382h26.393v3.424l-21.24 26.027h21.744v3.784H18.293v-3.43l21.24-26.02H18.8z"/>
-    </mask>
-  </defs>
-  <g>
-    <path fill="currentColor" mask="url(#ko)" d="M0 0h64v64H0z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><defs><mask id="a"><path fill="#fff" d="M0 0h64v64H0z"/><path d="M18.8 15.382h26.393v3.424l-21.24 26.027h21.744v3.784H18.293v-3.43l21.24-26.02H18.8z"/></mask></defs><path fill="currentColor" d="M0 0h64v64H0z" mask="url(#a)"/></svg>

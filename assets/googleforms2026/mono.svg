@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 192 192">
-  <defs>
-    <mask id="wko">
-      <rect width="192" height="192" fill="white"/>
-      <circle cx="45" cy="46" r="12" fill="black"/>
-    </mask>
-  </defs>
-  <g fill="currentColor" mask="url(#wko)">
-    <rect width="102" height="50" x="70" y="121" fill="currentColor" rx="25"/>
-    <rect width="50" height="50" x="20" y="121" fill="currentColor" rx="25"/>
-    <rect width="50" height="50" x="20" y="71" fill="currentColor" rx="25"/>
-    <rect width="102" height="50" x="70" y="71" fill="currentColor" rx="25"/>
-    <rect width="102" height="50" x="70" y="21" fill="currentColor" rx="25"/>
-    <rect width="102" height="50" x="70" y="21" fill="currentColor" rx="25"/>
-    <circle cx="56" cy="46" r="36" fill="currentColor"/>
-    <rect width="50" height="50" x="20" y="21" fill="currentColor" rx="25"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="none" viewBox="0 0 192 192"><defs><mask id="a"><path fill="#fff" d="M0 0h192v192H0z"/><circle cx="45" cy="46" r="12" fill="#000"/></mask></defs><g fill="currentColor" mask="url(#a)"><rect width="102" height="50" x="70" y="121" rx="25"/><rect width="50" height="50" x="20" y="121" rx="25"/><rect width="50" height="50" x="20" y="71" rx="25"/><rect width="102" height="50" x="70" y="71" rx="25"/><rect width="102" height="50" x="70" y="21" rx="25"/><rect width="102" height="50" x="70" y="21" rx="25"/><circle cx="56" cy="46" r="36"/><rect width="50" height="50" x="20" y="21" rx="25"/></g></svg>

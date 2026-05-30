@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
-  <defs>
-    <mask id="wko">
-      <rect width="18" height="18" fill="white"/>
-      <path fill="black" d="M7.956 8.822a4.36 4.36 0 0 1-2.367-.691l2.283 6.105L10.2 8.173a4.4 4.4 0 0 1-2.244.649" opacity=".8"/>
-    </mask>
-  </defs>
-  <g fill="currentColor" mask="url(#wko)">
-    <path fill="currentColor" d="M14.239 17.221a1.363 1.363 0 0 0 1.383-1.341v-.031a1 1 0 0 0 0-.168c-.545-4.346-3.016-7.881-7.75-7.881s-7.246 3-7.76 7.9a1.4 1.4 0 0 0 1.247 1.529z"/>
-  </g>
-  <circle cx="7.904" cy="4.466" r="4.367" fill="currentColor"/>
-  <path fill="currentColor" d="M17.894 11.231v4.44l-3.812 2.23v-4.44z"/>
-  <path fill="currentColor" d="m17.894 11.231-3.812 2.23-3.812-2.23L14.082 9z"/>
-  <path fill="currentColor" d="M14.082 13.461v4.44l-3.812-2.23v-4.44z"/>
-  <path fill="currentColor" d="m10.27 15.671 3.812-2.21v4.44z"/>
-  <path fill="currentColor" d="m17.894 15.671-3.812-2.21v4.44z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><defs><mask id="a"><path fill="#fff" d="M0 0h18v18H0z"/><path d="M7.956 8.822a4.36 4.36 0 0 1-2.367-.691l2.283 6.105L10.2 8.173a4.4 4.4 0 0 1-2.244.649" opacity=".8"/></mask></defs><g fill="currentColor" mask="url(#a)"><path d="M14.239 17.221a1.363 1.363 0 0 0 1.383-1.341v-.031a1 1 0 0 0 0-.168c-.545-4.346-3.016-7.881-7.75-7.881s-7.246 3-7.76 7.9a1.4 1.4 0 0 0 1.247 1.529z"/></g><circle cx="7.904" cy="4.466" r="4.367" fill="currentColor"/><path fill="currentColor" d="M17.894 11.231v4.44l-3.812 2.23v-4.44z"/><path fill="currentColor" d="m17.894 11.231-3.812 2.23-3.812-2.23L14.082 9z"/><path fill="currentColor" d="M14.082 13.461v4.44l-3.812-2.23v-4.44z"/><path fill="currentColor" d="m10.27 15.671 3.812-2.21v4.44z"/><path fill="currentColor" d="m17.894 15.671-3.812-2.21v4.44z"/></svg>

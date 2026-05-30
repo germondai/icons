@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="#2d6a8a" viewBox="0 0 24 24">
-  <defs>
-    <mask id="wko">
-      <rect width="24" height="24" fill="white"/>
-      <circle cx="10" cy="7" r="1.8" fill="black"/>
-      <circle cx="14" cy="7" r="1.8" fill="black"/>
-    </mask>
-  </defs>
-  <g fill="currentColor" mask="url(#wko)">
-    <path fill="currentColor" d="M5.5 10Q2 8.5 2 11t3 1.5M18.5 10Q22 8.5 22 11t-3 1.5"/>
-  </g>
-  <circle cx="10.3" cy="6.8" r="1" fill="currentColor"/>
-  <circle cx="14.3" cy="6.8" r="1" fill="currentColor"/>
-  <rect width="4" height="3" x="10" y="11" fill="currentColor" opacity=".5" rx=".8"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="#2d6a8a" viewBox="0 0 24 24"><defs><mask id="a"><path fill="#fff" d="M0 0h24v24H0z"/><circle cx="10" cy="7" r="1.8" fill="#000"/><circle cx="14" cy="7" r="1.8" fill="#000"/></mask></defs><g fill="currentColor" mask="url(#a)"><path d="M5.5 10Q2 8.5 2 11t3 1.5M18.5 10Q22 8.5 22 11t-3 1.5"/></g><circle cx="10.3" cy="6.8" r="1" fill="currentColor"/><circle cx="14.3" cy="6.8" r="1" fill="currentColor"/><rect width="4" height="3" x="10" y="11" fill="currentColor" opacity=".5" rx=".8"/></svg>
