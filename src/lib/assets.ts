@@ -67,9 +67,23 @@ const parseSvg = (
       defsParts.push(m)
       return `\x00DEFS${defsParts.length - 1}\x00`
     })
-    const replaced = body
+    let replaced = body
       .replace(/\s+fill="(?!none)[^"]*"/gi, ' fill="currentColor"')
       .replace(/fill:\s*(?!none)[^;}"]+/gi, "fill:currentColor")
+
+    // parseSvg strips the root <svg> element, so shapes that inherit fill from
+    // <svg fill="currentColor"> lose that context and render black. Explicitly
+    // add fill="currentColor" to any visible shape that has no fill attribute.
+    // Skip when the root had fill="none" (stroke-based/outline icon — shapes
+    // there are intentionally unfilled and should stay that way).
+    const rootHasNoneFill = /<svg\b[^>]*\bfill\s*=\s*"none"/i.test(raw)
+    if (!rootHasNoneFill) {
+      replaced = replaced.replace(
+        /<(path|circle|rect|ellipse|polygon|polyline)\b(?![^>]*\bfill\s*=)([^>]*(?:\/>|>))/gi,
+        '<$1 fill="currentColor"$2',
+      )
+    }
+
     content = replaced.replace(/\x00DEFS(\d+)\x00/g, (_, i) => defsParts[Number(i)] ?? "")
   }
 
