@@ -20,6 +20,20 @@ const SVGO_CONFIG = {
       params: {
         overrides: {
           mergePaths: false,
+          // Keep <rect> elements so parseSvg's fullBleed rect detection works correctly.
+          convertShapeToPath: false,
+          // parseSvg strips the root <svg> element when loading icons, so children must
+          // carry their own explicit fill/stroke attributes rather than relying on
+          // inheritance from the root. Disabling these two plugins prevents SVGO from
+          // removing "redundant" attributes that would be lost once the root is gone:
+          //   - removeUnknownsAndDefaults: strips fill="currentColor" from paths when
+          //     the parent <svg fill="currentColor"> already sets it — breaking mono icon
+          //     color customization after the root is removed.
+          //   - removeUselessStrokeAndFill: strips fill="none" from paths when the parent
+          //     <svg fill="none"> already sets it — making transparent shapes visible
+          //     when a ?color= URL option is applied.
+          removeUnknownsAndDefaults: false,
+          removeUselessStrokeAndFill: false,
           inlineStyles: {
             onlyMatchedOnce: false,
             removeMatchedSelectors: true,
@@ -27,6 +41,8 @@ const SVGO_CONFIG = {
         },
       },
     },
+    // Convert any remaining style="" fill/stroke properties to SVG presentation attributes
+    // so the runtime regex in svg.ts can find and strip them for ?color= customization.
     "convertStyleToAttrs",
     "removeTitle",
     "removeDesc",
